@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1 id="header">Wine Scraper</h1>
+        <div class="sites">
+            <h1><a href="https://www.lastbottlewines.com/" target="_blank" rel="noopener noreferrer">Last Bottle</a></h1>
+            <div class="description">
+                <h2>{{ name }}</h2>
+                <h3>Price: ${{ price }}</h3>
+            </div>
+            <div class="image-container">
+                <img src="{{ image }}" alt="">
+            </div>
+        </div>
+
+        <div class="bottom-boarder"></div>
+
+        <div class="sites">
+            <h1><a href="https://winespies.com/" target="_blank" rel="noopener noreferrer">Wine Spies</a></h1>
+            <h2>{{ winespies_name }}</h2>
+            <h3>Price: ${{ winespies_price }}</h3>
+            <img src="{{ winespies_image }}" alt="">
+        </div>
+
+        <div class="bottom-boarder"></div>
+
+        <div class="sites">
+            <h1><a href="http://cinderellawine.com/" target="_blank" rel="noopener noreferrer">Cinderella Wine</a></h1>
+            <h2>{{ cinderella_name }}</h2>
+            <h3>Price: ${{ cinderella_price }}</h3>
+            <img src="{{ cinderella_image }}" alt="">
+        </div>
+
+        <div class="bottom-boarder"></div>
+
+        <div class="sites">
+            <h1><a href="https://www.invino.com/" target="_blank" rel="noopener noreferrer">Invino</a></h1>
+            <h2>{{ invino_name }}</h2>
+            <h3>Price: ${{ invino_price }}</h3>
+            <img src="{{ invino_image }}" alt="">
+        </div>
+
+        <div class="bottom-boarder"></div>
+
+        <div class="sites">
+            <h1><a href="https://www.firstbottlewines.com/" target="_blank" rel="noopener noreferrer">First Bottle</a></h1>
+            <h2>{{ firstbottle_name }}</h2>
+            <h3>Price: ${{ firstbottle_price }}</h3>
+            <img src="{{ firstbottle_image }}" alt="">
+        </div>
+
+        <div class="bottom-boarder"></div>
+
+        <div class="sites">
+            <h1><a href="https://www.sommselect.com/daily-offer/" target="_blank" rel="noopener noreferrer">Somm Select</a></h1>
+            <h2>{{ somm_name }}</h2>
+            <h3>Price: ${{ somm_price }}</h3>
+            <img src="{{ somm_image }}" alt="">
+        </div>
+
+        <div class="bottom-boarder"></div>
+
+        <div class="sites">
+            <h1><a href="https://www.wtso.com/" target="_blank" rel="noopener noreferrer">WTSO</a></h1>
+            <h2>{{ wtso_name }}</h2>
+            <h3>Price: ${{ wtso_price }}</h3>
+            <img src="{{ wtso_image }}" alt="">
+        </div>
+    </div>
+</body>
+</html>

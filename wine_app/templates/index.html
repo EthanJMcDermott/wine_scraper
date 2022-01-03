@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1 id="header"><span id="header-left">Deals</span> <span id="header-small">From The</span> <span id="header-right">Vine</span></h1>
+        </header>
+        <img id="header-icon" src="{% static 'images/wine-glasses-128.png' %}" alt="wine-glass-icon">
+        <div class="grid-layout">
+            {% for website in websites %}
+            <div class="sites">
+                <h1 class="title"><a href={{ website.link }} target="_blank" rel="noopener noreferrer">{{ website.title }}</a></h1>
+                <div class="description">
+                    <h2 class="name">{{ website.name }}</h2>
+                    <div class="price-comparison">
+                        <h4 class="retail-price">Retail: ${{ website.retail }}</h4>
+                        <h4>Price: ${{ website.price }}</h4>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="{{ website.image }}" alt="">
+                </div>
+                <!-- {% if website.ratings %}
+                <h2 class="rating-header">Ratings:</h2>
+                {% endif %} -->
+                <div class="ratings">
+                    {% for rating in website.ratings %}
+                    {% if rating|length > 3 %}
+                    <span class="rating-long">{{ rating }}</span>
+                    {% else %}
+                    <span class="rating">{{ rating }}</span>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="button-container">
+                    <a class="view-site-button" href={{ website.link }} target="_blank" rel="noopener noreferrer">Check it Out!</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <footer>
+            <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </footer>
+    </div>
+</body>
+</html>

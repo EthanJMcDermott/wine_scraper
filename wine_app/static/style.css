@@ -1,0 +1,239 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #fee9e9;
+}
+
+a {text-decoration: none;}
+
+
+
+#header {
+    width: 90%;
+    margin: auto;
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    color: #f04b4b;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#header-left{
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Dancing Script', cursive;
+}
+
+#header-small {
+    display: block;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+#header-right{
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Dancing Script', cursive;
+}
+
+#header-icon {margin-bottom: 2rem;}
+
+.sites { 
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 1rem 0 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+}
+
+.title {text-align: center;}
+
+.title a {font-family: 'Dancing Script', cursive; color: #f04b4b;}
+
+#bottom {border: none; margin-bottom: 0;}
+
+.name {
+    text-align: center;
+    font-style: italic;
+}
+
+.price-comparison {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.retail-price {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    font-style: italic;
+}
+
+.description {
+    margin:1rem 1.5rem .5rem 1.5rem;
+}
+
+
+.image-container {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    height: 100%;
+    margin: auto;
+    
+}
+
+.bottom-boarder {
+    width: 75%;
+    margin: auto;
+    height: fit-content;
+    border-bottom: .5rem solid red;
+}
+
+.ratings {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    display: inline-block;
+    line-height: 3rem;
+    width: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(197 23 23);
+    color: white;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.rating-long {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    display: inline-block;
+    line-height: 3rem;
+    width: fit-content;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(197 23 23);
+    color: white;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.rating-header {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+.button-container {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.view-site-button {
+    color: white;
+    margin: auto;
+    padding: 1rem;
+    background-color: rgb(37, 37, 37);
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    margin-top: 5rem;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: yellow;
+}
+
+@media only screen and (min-width: 450px) {
+    .grid-layout {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 2000px;
+    }
+
+    #header {
+        max-width: 405px;
+        box-shadow: none;
+    }
+    
+    .price-comparison {margin-top: .7rem;}
+
+    .price-comparison h4 {font-size: 1.3rem;}
+
+    .sites {
+        max-width: 450px;
+        min-height: 675px;
+        position: relative;
+    }
+
+    .name {
+        display: flex;
+        min-height: 145px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 5%;
+        right: 0;
+    }
+
+    .image-container {height: 15rem;}
+}
+
+@media only screen and (min-width: 900px) {
+    #header-right {display: inline-block;}
+    #header-small {display: inline-block; font-size: 4.5rem;}
+    #header-left {display: inline-block;}
+
+    #header {max-width: fit-content;}
+}
+
+@media only screen and (min-width: 1500px) {
+    .sites {
+        min-height: 800px;
+    }
+}
